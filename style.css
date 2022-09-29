@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Megrim&family=Nixie+One&display=swap');
+
+/*------background colors-------*/
+
+main {
+    background-color: rgb(203, 203, 203);
+    padding: 15em;
+    margin:0;
+}
+
+body {
+    background-color: rgb(226, 224, 224);
+    margin: 0;
+}
+
+/*---Header & Nav--*/
+
+header {
+    margin-top: 0;
+    border-bottom: 1pt solid black;
+    background-color: rgba(238, 238, 238, 0.5);
+}
+
+.site-nav {
+    font-family: 'Nixie One', cursive;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2em;
+    padding-top: 2em;
+}
+
+.site-nav li {
+    display:inline-block;
+    margin: 5pt;
+    padding: 0em 5em 0em 5em;
+}
+
+.site-nav a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(141, 173, 243);
+    border-bottom: 2pt solid;
+    transition-duration: .4s;
+}
+
+/*------flower base & petals-----*/
+
+.flower {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    z-index: 9;
+    animation: linear 2s riseup;
+}
+
+.flower > div {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 60% 10% 60% 60% / 60%;
+    transform-origin: 300px;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+/*-------------Petals------------*/
+
+.petal1 {
+    background-color: rgba(4, 124, 165, 0.5); /*1*/
+    transform: translate(0px, 150px) rotate(0deg);
+    animation-name: color;
+}
+
+.petal2 {
+    background-color: rgba(29,90,170,0.5); /*2*/
+    transform: translate(0px, 150px) rotate(30deg);
+    animation-name: color;
+}
+
+.petal3 {
+    background-color: rgba(29,90,170,0.5);  /*3*/
+    transform: translate(0px, 150px) rotate(60deg);
+    animation-name: color;
+}
+
+.petal4 {
+    background-color: rgba(3, 102, 135, 0.5); /*1*/
+    transform: translate(0px, 150px) rotate(90deg);
+    animation-name: color;
+}
+
+.petal5 {
+    background-color: rgba(29,90,170,0.5); /*2*/
+    transform: translate(0px, 150px) rotate(120deg);
+    animation-name: color;
+}
+
+.petal6 {
+    background-color: rgba(29,90,170,0.5);  /*3*/
+    transform: translate(0px, 150px) rotate(150deg);
+    animation-name: color;
+}
+
+.petal7 {
+    background-color: rgba(7, 119, 156, 0.5); /*1*/
+    transform: translate(0px, 150px) rotate(180deg);
+    animation-name: color;
+}
+
+.petal8 {
+    background-color: rgba(29,90,170,0.5); /*2*/
+    transform: translate(0px, 150px) rotate(210deg);
+    animation-name: color;
+}
+
+.petal9 {
+    background-color: rgba(29,90,170,0.5);  /*3*/
+    transform: translate(0px, 150px) rotate(240deg);
+    animation-name: color;
+}
+
+.petal10 {
+    background-color: rgba(8, 126, 165, 0.5); /*1*/
+    transform: translate(0px, 150px) rotate(270deg);
+    animation-name: color;
+}
+
+.petal11 {
+    background-color: rgba(29,90,170,0.5); /*2*/
+    transform: translate(0px, 150px) rotate(300deg);
+    animation-name: color;
+}
+
+.petal12 {
+    background-color: rgba(29,90,170,0.5);  /*3*/
+    transform: translate(0px, 150px) rotate(330deg);
+    animation-name: color;
+}
+
+/*---Stem/leaf---*/
+
+.stem {
+    position: absolute;
+    top: 85%;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 200px;
+    background-color: rgba(57, 184, 57, 0.967);
+    margin:0;
+    opacity: 80%;
+    padding: 0;
+}
+
+.leaf {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 60% 10% 60% 60% / 60%;
+    background-color: rgba(19, 168, 19, 0.958);
+}
+
+/*---text---*/
+
+h1 {
+    position:absolute;
+    bottom: 48%;
+    right: 45%;
+    margin: 0;
+    padding: 0;
+    transform: translate(10%,20%);
+    background: none;
+    color: white;
+    animation: fadein 4s ease-in;
+    z-index: 9;
+    font-size: 80pt;
+    font-family: roboto;
+}
+
+h1:hover {
+    animation: fadein 2s ease-out;
+    color: blue;
+}
+
+/*-------------keyframes----------*/
+
+@keyframes color {
+    20% {transform: translate(0px, 150px) rotate(-180deg);}
+}
+
+/*--fade-in text--*/
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% { opacity: 100%;}
+}
+
+/*--brings the flower head from the ground--*/
+@keyframes riseup {
+    0%{transform:translate(50px,-50px);} 
+   }
